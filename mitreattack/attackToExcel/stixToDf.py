@@ -166,6 +166,7 @@ def techniquesToDf(src, domain):
                                      technique["external_references"]))
             if capec_refs:
                 row["CAPEC ID"] = ", ".join([x["external_id"] for x in capec_refs])
+                row["CAPEC URL"] = ", ".join([x["url"] for x in capec_refs])
 
         # domain specific fields -- mobile
         elif domain == "mobile-attack":
